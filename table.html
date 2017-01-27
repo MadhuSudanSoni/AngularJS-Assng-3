@@ -1,0 +1,14 @@
+<table border = 2 ng-if='!(NIDCon.items == undefined)'>
+      <tr>
+        <th>Sr No.</th>
+        <th>Item ID</th>
+        <th>Name</th>
+        <th>Remove</th>
+      </tr>
+      <tr ng-repeat="item in NIDCon.items">
+        <td>{{$index + 1}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td> 
+        <td><button class="btn btn-primary" ng-click = 'NIDCon.onRmove()' style="padding: 2 2 2 2;">Remove</button></td> 
+      </tr>
+</table>

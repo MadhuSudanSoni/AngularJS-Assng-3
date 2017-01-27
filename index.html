@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body ng-app="NarrowItDownApp">
+   <div ng-controller="NarrowItDownController as NIDCon" class="container">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+      
+    <div class="form-group">
+      <input type="text" placeholder="search term" class="form-control" ng-model='NIDCon.searchTerm'>
+    </div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary" ng-click = 'NIDCon.action()'>Narrow It Down For Me!</button>
+    </div>
+    <br><br><br><br>
+    <!-- <ol >
+      <li ng-repeat="item in NIDCon.items">
+        {{item.name}}
+      </li>
+    </ol> -->
+
+    <!-- <table border = 2 ng-if='!(NIDCon.items == undefined)'>
+      <tr>
+        <th>Sr No.</th>
+        <th>Item ID</th>
+        <th>Name</th>
+      </tr>
+      <tr ng-repeat="item in NIDCon.items">
+        <td>{{$index + 1}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>  
+      </tr>
+    </table> -->
+
+    <!-- found-items should be implemented as a component -->
+    <!-- <found-items found-items="...." on-remove="...."></found-items> -->
+    <found-items></found-items>
+    <br><br><br><br>
+    {{NIDCon.v}}df
+  </div>
+
+</body>
+</html>
